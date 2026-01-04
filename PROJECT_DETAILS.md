@@ -8,9 +8,34 @@ This is a full-stack web application designed to be a personal digital diary.
 - **Backend**: Built with **FastAPI** (Python) to handle logic, authentication, and data storage.
 - **Database**: **SQLite** is used for simple, local data storage.
 
+## 2. Running and Stopping the Project
+
+### How to Run
+You need two terminal windows open.
+
+**Terminal 1: Backend (Server)**
+```bash
+source venv/bin/activate
+uvicorn backend.main:app --reload --port 8000
+```
+*   `source venv/bin/activate`: Turns on the Python virtual environment.
+*   `uvicorn ...`: Starts the web server.
+
+**Terminal 2: Frontend (UI)**
+```bash
+cd frontend
+npm run dev
+```
+*   `npm run dev`: Starts the React development server.
+
+### How to Stop
+1.  Click inside the terminal window.
+2.  Press `Ctrl + C` on your keyboard.
+3.  Repeat for both terminals.
+
 ---
 
-## 2. Development Journey: How We Built It
+## 3. Development Journey: How We Built It
 
 ### Step 1: The Plan
 We started by defining the goal: a diary app where users can sign up, log in, and write entries with mood emojis. We decided on a "Split View" dashboard for better usability.
